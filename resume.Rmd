@@ -1,6 +1,6 @@
 ---
-title: Nick Strayer's Resume"
-author: Nick Strayer
+title: Tamy Tsujimoto's Resume"
+author: Tamy Tsujimoto
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
@@ -15,6 +15,7 @@ knitr::opts_chunk$set(
   results='asis', 
   echo = FALSE
 )
+
 library(tidyverse)
 library(glue)
 

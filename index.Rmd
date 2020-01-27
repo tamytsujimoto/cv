@@ -56,7 +56,7 @@ Aside
 if(PDF_EXPORT){
   cat("")
 } else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/tamytsujimoto/cv/pdf/tamytsujimoto_cv.pdf)")
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/tamytsujimoto/cv/raw/master/pdf/tamytsujimoto_cv.pdf)")
 }
 ```
 

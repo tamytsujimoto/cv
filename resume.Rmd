@@ -58,14 +58,16 @@ Contact {#contact}
 - <i class="fa fa-phone"></i> +1 (919) 593-9074
 
 
-Language Skills {#skills}
+Skills {#skills}
 --------------------------------------------------------------------------------
 
 ```{r}
 skills <- tribble(
   ~skill,               ~level,
   "R",                  5,
+  "SPSS",               5,
   "SAS",                4,
+  "Stata",              4,
   "Python",             2.5
 )
 
@@ -75,15 +77,10 @@ build_skill_bars(skills)
 Languages {#language}
 --------------------------------------------------------------------------------
 
-```{r}
-language <- tribble(
-  ~skill,               ~level,
-  "Portuguese",         5,
-  "English",            4
-)
+Portuguese: Native
 
-build_skill_bars(language)
-```
+English: Fluent
+
 <!-- Open Source Contributions {#open-source} -->
 <!-- -------------------------------------------------------------------------------- -->
 
@@ -104,21 +101,23 @@ build_skill_bars(language)
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made w/ [**pagedown**](https://github.com/rstudio/pagedown). 
+Made with [**pagedown**](https://github.com/rstudio/pagedown). 
 <!-- Source code: [github.com/nstrayer/cv](https://github.com/nstrayer/cv). -->
+
 Last updated on `r Sys.Date()`.
-
-
 
 
 Main
 ================================================================================
 
-Tamy H. M Tsujimoto {#title}
+Tamy H. M. Tsujimoto {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
-intro_text <- "INTRO HERE"
+intro_text <- 
+"
+PhD candidate in Biostatistics currently searching for 2020 summer internship
+"
 
 
 cat(sanitize_links(intro_text))

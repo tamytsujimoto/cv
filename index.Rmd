@@ -107,14 +107,14 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Tamy Tsujimoto {#title}
+Tamy Harumy Moraes Tsujimoto {#title}
 --------------------------------------------------------------------------------
 
 
 ```{r}
 intro_text <- 
 "
-PhD candidate in Biostatistics currently searching for 2020 summer internship
+PhD candidate in Biostatistics currently searching for 2021 summer internship
 "
 
 cat(sanitize_links(intro_text))

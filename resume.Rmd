@@ -116,7 +116,7 @@ Tamy Harumy Moraes Tsujimoto {#title}
 ```{r}
 intro_text <- 
 "
-PhD candidate in Biostatistics currently searching for 2020 summer internship
+PhD candidate in Biostatistics currently searching for 2021 summer internship
 "
 
 

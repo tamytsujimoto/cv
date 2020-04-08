@@ -93,7 +93,6 @@ Portuguese: Native
 
 English: Fluent
 
-
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
@@ -159,6 +158,13 @@ Research and Teaching Experience {data-icon=chalkboard-teacher}
 print_section(position_data, 'research_teaching')
 ```
 
+
+<!-- Courses taken {data-icon=chalkboard} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+```{r}
+#print_section(position_data, 'courses')
+```
 
 Publications, Posters, and Talks {data-icon=book}
 --------------------------------------------------------------------------------

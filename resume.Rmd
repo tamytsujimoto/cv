@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 )
 
 library(tidyverse)
-library(glue)
+library(glue) 
 
 # Set this to true to have links turned into footnotes at the end of the document
 PDF_EXPORT <- FALSE
@@ -31,15 +31,15 @@ source('parsing_functions.R')
 # First let's get the data, filtering to only the items tagged as
 # Resume items
 position_data <- read_csv('positions.csv') %>% 
-  filter(in_resume)
-  # mutate(
-  #   # Build some custom sections by collapsing others
-  #   section = case_when(
-  #     section %in% c('research_positions', 'industry_positions') ~ 'positions', 
-  #     section %in% c('data_science_writings', 'by_me_press') ~ 'writings',
-  #     TRUE ~ section
-  #   )
-  # ) 
+  filter(in_resume) %>% 
+  mutate(
+    # Build some custom sections by collapsing others
+    section = case_when(
+      section %in% c('research_positions', 'industry_positions') ~ 'positions',
+      #section %in% c('data_science_writings', 'by_me_press') ~ 'writings',
+      TRUE ~ section
+    )
+  )
 
 ```
 
@@ -119,11 +119,8 @@ intro_text <-
 PhD candidate in Biostatistics currently searching for 2021 summer internship
 "
 
-
 cat(sanitize_links(intro_text))
 ```
-
-
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -132,11 +129,11 @@ Education {data-icon=graduation-cap data-concise=true}
 print_section(position_data, 'education')
 ```
 
-Industry Experience {data-icon=suitcase}
+Positions {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ```{r}
-print_section(position_data, 'industry')
+print_section(position_data, 'positions')
 ```
 
 Professional Development {data-icon=laptop}

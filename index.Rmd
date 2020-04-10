@@ -28,7 +28,9 @@ links <- c()
 source('parsing_functions.R')
 
 # Load csv with position info
-position_data <- read_csv('positions.csv')
+position_data <- read_csv('positions.csv') %>% 
+  filter(in_cv)
+
 ```
 
 
@@ -119,8 +121,6 @@ PhD candidate in Biostatistics currently searching for 2021 summer internship
 cat(sanitize_links(intro_text))
 ```
 
-
-
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
@@ -128,7 +128,7 @@ Education {data-icon=graduation-cap data-concise=true}
 print_section(position_data, 'education')
 ```
 
-Industry Experience {data-icon=suitcase}
+Industry Positions {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 <!-- ::: aside -->
@@ -136,7 +136,18 @@ Industry Experience {data-icon=suitcase}
 <!-- ::: -->
 
 ```{r}
-print_section(position_data, 'industry')
+print_section(position_data, 'industry_positions')
+```
+
+Research and Teaching Positions {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+<!-- ::: aside -->
+<!-- I am passionate about education. I believe that no topic is too complex if the teacher is empathetic and willing to think about new methods of approaching task. -->
+<!-- ::: -->
+
+```{r}
+print_section(position_data, 'research_positions')
 ```
 
 Professional Development {data-icon=laptop}
@@ -146,19 +157,6 @@ Professional Development {data-icon=laptop}
 print_section(position_data, 'professional_dvlp')
 ```
 
-\newpage
-Research and Teaching Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
-
-<!-- ::: aside -->
-<!-- I am passionate about education. I believe that no topic is too complex if the teacher is empathetic and willing to think about new methods of approaching task. -->
-<!-- ::: -->
-
-```{r}
-print_section(position_data, 'research_teaching')
-```
-
-
 <!-- Courses taken {data-icon=chalkboard} -->
 <!-- -------------------------------------------------------------------------------- -->
 
@@ -166,11 +164,18 @@ print_section(position_data, 'research_teaching')
 #print_section(position_data, 'courses')
 ```
 
-Publications, Posters, and Talks {data-icon=book}
+Publications  {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
 ```{r}
-print_section(position_data, 'paper_poster_talk')
+print_section(position_data, 'paper')
+```
+
+Poster and Talks {data-icon=chart-line}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'poster_talk')
 ```
 
 
